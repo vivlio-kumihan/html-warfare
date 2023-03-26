@@ -10,10 +10,57 @@ body {
   color: #555;
 }
 
-.container {
-  max-width: 900px;
+#container {
+  max-width: 600px;
   margin: 5rem auto;
   padding: 1rem;
   background-color: #eee;
   border-radius: .3rem;
+}
+
+h1,
+h2,
+h3 {
+  margin: 1.5rem 0 .5rem;
+  padding-left: 1rem;
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #555;
+}
+
+h1 {
+  font-size: 2rem;
+  font-weight: 900;
+}
+
+h1:first-of-type {
+  margin-top: 0rem;
+}
+
+h2 {
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+
+h2 + h3 {
+  margin-top: 0rem;
+}
+
+p {
+  /* text-indent: 1rem; */
+}
+
+em {
+  font-style: normal;
+  font-weight: 700;
+  color: rgb(250, 90, 90);
+}
+
+address {
+  line-height: 1.2;
+}
+
+footer > p {
+  text-align: center;
+  text-indent: 0;
 }
