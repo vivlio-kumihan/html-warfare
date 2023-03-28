@@ -6,29 +6,55 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="./assets/css/destyle.css">
   <link rel="stylesheet" href="./assets/css/fonts.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
   <link rel="stylesheet" href="./assets/css/style.css">
-  <script src="./assets/js/behavior.js"></script>
+  <script src="https://kit.fontawesome.com/678cad97f5.js" crossorigin="anonymous"></script>
+  <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+  <script src="./assets/js/behavior.js" defer></script>
+
   <title>Dummy Kitchen | 架空の絶品料理レシピサイト</title>
 </head>
 <body>
   <div id="container">
-    <h1>Dummy Kitchen</h1>
-    <p>架空の絶品料理レシピサイト</p>
-    <h2>Pick Up</h2>
-    <h3>絶対に失敗しない架空のからあげ</h3>
-    <p>生姜&ニンニクをたっぷり使い下味をしっかりつけた鶏もも肉のからあげです。2度揚げすることで外はカリッと中はジューシーで<em>ビール</em>との相性もバッチリですよ。</p>
-    <h3>ごはんが進むイカと大葉のバター醤油炒め</h3>
-    <p>ぷりぷりのイカに大葉がアクセントになって、ごはんが<em>何杯</em>でも食べられる逸品です！お弁当に入れても、おつまみとしてもその役割を全うします。</p>  
-    <h2>新着の絶品架空レシピ</h2>
-    <p>最近投稿された絶品レシピをご紹介。</p>
-    <h3>名店の味を再現！自宅で作る究極のTKG</h3>
-    <p>架空のたまごかけご飯専門店「だみい屋」さんのTKGを<em>家庭</em>で再現してみました。隠し味のごま油がワンランク上のTKGに仕上げてくれます。</p>
-    <strong>当サイトのレシピは全て架空のレシピのため味の保証は致しません。</strong>
-    <p>Dummy Kitchenへのお問い合わせは、お問い合わせフォームか下記住所宛にご連絡ください。</p>
-    <address>〒573-1114<br>大阪府枚方市東山20-40-280</address>
-    <footer>
-      <small>&copy; 2022 Dummy Kitchen</small>
-    </footer>
+    <h1>絶対に失敗しない<br/>架空のからあげ</h1>
+    <p>絶対に失敗しない最高においしい架空のからあげの作り方がわかったのでみなさんに共有します。とっても簡単ですが<strong>架空のからあげなので絶対に真似しないでくださいね。</strong></p>
+    
+    <h2>材料（2人分）</h2>
+    <ul id="ingredient">
+      <li>鶏もも肉 300g</li>
+      <li>片栗粉 適量</li>
+      <li>サラダ油 適量</li>
+      <li>しょうゆ 大さじ1</li>
+      <li>おろしにんにく 1片</li>
+      <li>おろししょうが 1片</li>
+    </ul>
+    
+    <h2>作り方</h2>
+    <ol id="recipe" start="1">
+      <li>袋に一口サイズに切った鶏肉としょうゆとおろしにんにく、おろししょうがを入れてよく揉み込む</li>
+      <li>ボウルに片栗粉を入れ、鶏肉としっかりと絡める</li>
+      <li value="2">180℃に熱した油で4〜5分揚げる</li>
+      <li>お皿に盛り付けて完成</li>
+      <li>袋に一口サイズに切った鶏肉としょうゆとおろしにんにく、おろししょうがを入れてよく揉み込む</li>
+      <li>ボウルに片栗粉を入れ、鶏肉としっかりと絡める</li>
+      <li value="5">180℃に熱した油で4〜5分揚げる</li>
+      <li>お皿に盛り付けて完成</li>
+      <li>袋に一口サイズに切った鶏肉としょうゆとおろしにんにく、おろししょうがを入れてよく揉み込む</li>
+      <li>ボウルに片栗粉を入れ、鶏肉としっかりと絡める</li>
+      <li>180℃に熱した油で4〜5分揚げる</li>
+      <li>お皿に盛り付けて完成</li>
+    </ol>
+
+    <h2>このレシピに関するよくある質問</h2>
+    <dl id="qa" type="i">
+      <dt>おろしにんにくはチューブタイプでもいいですか？</dt>
+      <dd>はい、チューブタイプでも大丈夫です。</dd>
+      <dt>鶏もも肉はどこで購入できますか？</dt>
+      <dd>お近くのスーパーマーケットなどでお買い求め下さい。</dd>
+    </dl>
   </div>
 </body>
 </html>
+
+
+

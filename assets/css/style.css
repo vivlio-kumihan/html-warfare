@@ -11,7 +11,7 @@ body {
 }
 
 #container {
-  max-width: 600px;
+  max-width: 450px;
   margin: 5rem auto;
   padding: 1rem;
   background-color: #eee;
@@ -22,9 +22,10 @@ h1,
 h2,
 h3 {
   margin: 1.5rem 0 .5rem;
-  padding-left: 1rem;
+  text-align: center;
   font-size: 1.1rem;
   font-weight: 600;
+  line-height: 1.2;
   color: #555;
 }
 
@@ -38,29 +39,66 @@ h1:first-of-type {
 }
 
 h2 {
+  margin: 1.5em 0 .75em;
+  padding-bottom: .25em;
   font-size: 1.5rem;
   font-weight: 700;
-}
-
-h2 + h3 {
-  margin-top: 0rem;
+  border-bottom: 1px dotted #333;
 }
 
 p {
-  /* text-indent: 1rem; */
+  text-indent: 1rem;
 }
 
-em {
-  font-style: normal;
-  font-weight: 700;
-  color: rgb(250, 90, 90);
-}
-
-address {
+ul, ol {
   line-height: 1.2;
 }
 
-footer > p {
-  text-align: center;
-  text-indent: 0;
+li:not(:first-of-type) {
+  margin-top: .75em;
+}
+
+#ingredient > li {
+  position: relative;;
+  padding-left: 2.5rem;
+}
+
+#ingredient > li::before {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  left: 1rem;
+  content: "\f111";
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+  color: #999;
+}
+
+#recipe {
+  padding-left: 2rem;
+  list-style: decimal;
+}
+
+#qa > dt {
+  position: relative;
+  padding-left: 2.5rem;
+}
+
+#qa > dt::before {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  left: 1rem;
+  content: "\f059";
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+  color: #555;
+}
+
+#qa > dd {
+  padding-left: 2.5rem;
+}
+
+#qa > dt:not(:first-of-type) {
+  margin-top: .75rem;
 }
