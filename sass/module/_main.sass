@@ -1,0 +1,116 @@
+// @use "forwards" as fw
+
+header
+  .wrapper
+    display: flex
+    justify-content: space-between
+    align-items: center
+    width: min(100%, 960px)
+    height: 30vh
+    margin: 0 auto
+    padding: 0 4%
+    h1
+      font-size: 2rem
+      font-weight: 300
+    ul
+      display: flex
+      justify-content: flex-end
+      li
+        lang: "en"
+        a
+          font-weight: 300
+      li + li
+        margin-left: 30px
+      .fa-instagram
+        font-size: 1.3rem
+  img
+    width: 100%
+    height: 48vh
+    object-fit: cover
+
+main
+  section
+    width: min(100%, 960px)
+    margin: 0 auto
+    padding: 0 4%
+    h2
+      margin: 90px 0 60px
+      font-family: "Roboto", sans-serif
+      font-size: 1.7rem
+      font-weight: 500
+      text-align: center
+    ul
+      margin-bottom: 30px
+      li
+        padding: 3px 0
+        &.name
+          margin-bottom: 30px
+    p
+      line-height: 1.5
+    &.works
+      ul
+        width: 100%
+        display: grid
+        grid-template-columns: repeat(3, 1fr)
+        gap: 20px
+        a
+          display: block
+          img
+            width: 100%
+            object-fit: cover
+    &.news
+      dl
+        div
+          display: flex
+          align-items: center
+          &:first-of-type dt, &:first-of-type dd
+            padding-top: 15px 
+            border-top: 1px dotted #aaa
+          dt, dd
+            margin-bottom: 15px
+            padding-bottom: 15px
+            border-bottom: 1px dotted #aaa
+          dt
+            width: 20%
+            font-weight: 300
+            letter-spacing: .1em
+          dd
+            width: 80%
+    &.contact
+      text-align: center
+      ul
+        div
+          display: flex
+          + div
+            margin-top: 10px
+          dt
+            width: 15%
+            font-size: 1.1rem
+            font-weight: 300
+          dd
+            width: 85%
+            input
+              width: 100%
+              height: 50px
+              border: 1px solid #bbb
+            textarea
+              height: 150px
+              width: 100%
+              border: 1px solid #bbb
+      button
+        width: 200px
+        height: 50px
+        margin-bottom: 130px
+        text-align: center
+        font-size: .9rem
+        font-weight: 500
+        color: #fff
+        background-color: #333
+
+footer
+  width: 100%
+  padding: 10px
+  text-align: center
+  font-size: .7rem
+  color: #fff
+  background-color: #333
