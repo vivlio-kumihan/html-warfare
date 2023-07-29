@@ -1,32 +1,4 @@
-// @use "forwards" as fw
-
-header
-  .wrapper
-    display: flex
-    justify-content: space-between
-    align-items: center
-    width: min(100%, 960px)
-    height: 30vh
-    margin: 0 auto
-    padding: 0 4%
-    h1
-      font-size: 2rem
-      font-weight: 300
-    ul
-      display: flex
-      justify-content: flex-end
-      li
-        lang: "en"
-        a
-          font-weight: 300
-      li + li
-        margin-left: 30px
-      .fa-instagram
-        font-size: 1.3rem
-  img
-    width: 100%
-    height: 48vh
-    object-fit: cover
+@use "../forwards" as fw
 
 main
   section
@@ -35,7 +7,7 @@ main
     padding: 0 4%
     h2
       margin: 90px 0 60px
-      font-family: "Roboto", sans-serif
+      font-family: fw.$roboto
       font-size: 1.7rem
       font-weight: 500
       text-align: center
@@ -43,6 +15,8 @@ main
       margin-bottom: 30px
       li
         padding: 3px 0
+        span::after
+          content: ' '
         &.name
           margin-bottom: 30px
     p
@@ -79,6 +53,7 @@ main
     &.contact
       text-align: center
       ul
+        margin: 0
         div
           display: flex
           + div
@@ -92,20 +67,79 @@ main
             input
               width: 100%
               height: 50px
+              padding: 5px
+              text-align: left
               border: 1px solid #bbb
             textarea
               height: 150px
               width: 100%
+              padding: 3%
+              text-align: left
               border: 1px solid #bbb
       button
         width: 200px
         height: 50px
-        margin-bottom: 130px
+        margin: 35px 0 130px
         text-align: center
         font-size: .9rem
         font-weight: 500
         color: #fff
         background-color: #333
+
++fw.media-query('sp')
+  main
+    section
+      &.about
+        h2
+          margin-bottom: 40px
+        p
+          font-size: .9rem
+      &.works
+        h2
+          margin: 80px 0 40px
+        ul
+          grid-template-columns: 1fr
+      &.news
+        h2
+          margin-bottom: 40px
+        dl
+          div
+            align-items: flex-start
+            flex-direction: column
+            padding: 15px 0
+            border-bottom: 1px dotted #aaa
+            &:first-of-type
+              padding-top: 15px
+              border-top: 1px dotted #aaa
+            &:first-of-type dt, &:first-of-type dd
+              padding-top: 0
+              border-top: unset
+            dt, dd
+              margin: 0
+              padding: 0
+              width: 100%
+              font-size: .9rem
+              font-weight: 400
+              text-align: left
+              border-bottom: unset
+            dt
+              margin-bottom: 5px
+            dd
+              line-height: 1.5
+      &.contact
+        h2
+          margin: 70px 0 40px
+        ul
+          div
+            flex-direction: column
+            dt
+              font-size: 1rem
+              margin-bottom: 3px
+            dd
+              width: 100%
+        button
+          margin: 35px 0 70px
+              
 
 footer
   width: 100%
