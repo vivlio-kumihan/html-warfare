@@ -1,3 +1,4 @@
+@charset "UTF-8";
 @import url("https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100;300;400;500;600;700;900&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap");
 button,
@@ -85,180 +86,219 @@ header img {
     background-size: 100%;
   }
 }
-main section {
-  width: min(100%, 960px);
-  margin: 0 auto;
-  padding: 0 4%;
-}
-main section h2 {
-  margin: 90px 0 60px;
-  font-family: "Roboto", sans-serif;
-  font-size: 1.7rem;
-  font-weight: 500;
-  text-align: center;
-}
-main section ul {
-  margin-bottom: 30px;
-}
-main section ul li {
-  padding: 3px 0;
-}
-main section ul li span::after {
-  content: " ";
-}
-main section ul li.name {
-  margin-bottom: 30px;
-}
-main section p {
-  line-height: 1.5;
-}
-main section.works ul {
+header {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  position: fixed;
+  top: 0;
+  left: 0;
   width: 100%;
+  height: 110px;
+  background-color: #fff;
+}
+header h1 {
+  margin: 20px 0 0 20px;
+  font-size: 1.8rem;
+  font-weight: 300;
+}
+header .main-nav-menu {
+  display: flex;
+  padding: 12px 20px;
+  color: #fff;
+  background-color: #333;
+}
+header .main-nav-menu li {
+  font-size: 0.85rem;
+  font-weight: 500;
+}
+header .main-nav-menu li + li {
+  margin-left: 50px;
+}
+
+main {
+  margin: 110px 0 0 0;
+}
+main .pick-up {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 20px;
+  gap: 25px;
+  padding: 40px 20px;
 }
-main section.works ul a {
-  display: block;
+main .pick-up li {
+  display: flex;
+  flex-direction: column;
 }
-main section.works ul a img {
+main .pick-up li img {
   width: 100%;
+  aspect-ratio: 3/1.7;
   -o-object-fit: cover;
      object-fit: cover;
 }
-main section.news dl div {
-  display: flex;
-  align-items: center;
+main .pick-up li h3 {
+  margin-top: 15px;
+  font-weight: 600;
+  line-height: 1.5;
 }
-main section.news dl div:first-of-type dt, main section.news dl div:first-of-type dd {
-  padding-top: 15px;
-  border-top: 1px dotted #aaa;
+main .wrapper {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 60px;
+  padding: 0 20px;
 }
-main section.news dl div dt, main section.news dl div dd {
+main .wrapper .main-articles ul li {
+  margin-top: 30px;
+}
+main .wrapper .main-articles ul li h2 {
+  font-size: 1.3rem;
+  font-weight: 700;
   margin-bottom: 15px;
-  padding-bottom: 15px;
-  border-bottom: 1px dotted #aaa;
 }
-main section.news dl div dt {
-  width: 20%;
-  font-weight: 300;
-  letter-spacing: 0.1em;
-}
-main section.news dl div dd {
-  width: 80%;
-}
-main section.contact {
-  text-align: center;
-}
-main section.contact ul {
-  margin: 0;
-}
-main section.contact ul div {
+main .wrapper .main-articles ul li .matter {
   display: flex;
-}
-main section.contact ul div + div {
-  margin-top: 10px;
-}
-main section.contact ul div dt {
-  width: 15%;
-  font-size: 1.1rem;
-  font-weight: 300;
-}
-main section.contact ul div dd {
-  width: 85%;
-}
-main section.contact ul div dd input {
-  width: 100%;
-  height: 50px;
-  padding: 5px;
-  text-align: left;
-  border: 1px solid #bbb;
-}
-main section.contact ul div dd textarea {
-  height: 150px;
-  width: 100%;
-  padding: 3%;
-  text-align: left;
-  border: 1px solid #bbb;
-}
-main section.contact button {
-  width: 200px;
-  height: 50px;
-  margin: 35px 0 130px;
-  text-align: center;
+  margin-bottom: 15px;
   font-size: 0.9rem;
-  font-weight: 500;
-  color: #fff;
-  background-color: #333;
+  font-weight: 400;
+}
+main .wrapper .main-articles ul li .matter .category {
+  margin-left: 20px;
+}
+main .wrapper .main-articles ul li img {
+  width: 100%;
+}
+main .wrapper .main-articles ul li p {
+  padding: 20px 5%;
+  font-weight: 400;
+  line-height: 1.5;
 }
 
-@media screen and (max-width: 428px) {
-  main section.about h2 {
-    margin-bottom: 40px;
-  }
-  main section.about p {
-    font-size: 0.9rem;
-  }
-  main section.works h2 {
-    margin: 80px 0 40px;
-  }
-  main section.works ul {
-    grid-template-columns: 1fr;
-  }
-  main section.news h2 {
-    margin-bottom: 40px;
-  }
-  main section.news dl div {
-    align-items: flex-start;
-    flex-direction: column;
-    padding: 15px 0;
-    border-bottom: 1px dotted #aaa;
-  }
-  main section.news dl div:first-of-type {
-    padding-top: 15px;
-    border-top: 1px dotted #aaa;
-  }
-  main section.news dl div:first-of-type dt, main section.news dl div:first-of-type dd {
-    padding-top: 0;
-    border-top: unset;
-  }
-  main section.news dl div dt, main section.news dl div dd {
-    margin: 0;
-    padding: 0;
-    width: 100%;
-    font-size: 0.9rem;
-    font-weight: 400;
-    text-align: left;
-    border-bottom: unset;
-  }
-  main section.news dl div dt {
-    margin-bottom: 5px;
-  }
-  main section.news dl div dd {
-    line-height: 1.5;
-  }
-  main section.contact h2 {
-    margin: 70px 0 40px;
-  }
-  main section.contact ul div {
-    flex-direction: column;
-  }
-  main section.contact ul div dt {
-    font-size: 1rem;
-    margin-bottom: 3px;
-  }
-  main section.contact ul div dd {
-    width: 100%;
-  }
-  main section.contact button {
-    margin: 35px 0 70px;
-  }
-}
-footer {
-  width: 100%;
-  padding: 10px;
+.read-more {
   text-align: center;
-  font-size: 0.7rem;
-  color: #fff;
+}
+.read-more a {
+  display: inline-block;
+  position: relative;
+  margin: 20px auto;
+  font-size: 14px;
+}
+.read-more a::after {
+  position: absolute;
+  bottom: -3px;
+  left: 0;
+  content: "";
+  width: 100%;
+  height: 1px;
   background-color: #333;
+  transition: 0.3s;
+}
+.read-more a:hover {
+  opacity: 0.7;
+}
+.read-more a:hover::after {
+  transform: translateY(10px);
+  opacity: 0;
+}
+
+aside {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+aside figcaption, aside p, aside li {
+  font-size: 0.85rem;
+  font-weight: 400;
+  line-height: 1.5;
+}
+aside .author img {
+  width: 125px;
+  aspect-ratio: 1;
+  border-radius: 50%;
+}
+aside h4 {
+  margin: 60px 0 25px;
+  font-size: 1.1rem;
+  font-weight: 700;
+  text-align: center;
+}
+aside .ranking li + li {
+  margin-top: 30px;
+}
+aside .ranking li img {
+  width: 100%;
+  aspect-ratio: 3/1.6;
+  -o-object-fit: cover;
+     object-fit: cover;
+  margin-bottom: 5px;
+}
+aside .monthly-archive-num-list li {
+  line-height: 1;
+  margin-bottom: 22.5px;
+  padding-bottom: 22.5px;
+  padding-left: 20px;
+  border-bottom: 1px solid #333;
+}
+aside .monthly-archive-num-list li:first-of-type {
+  margin-top: 22.5px;
+  padding-top: 22.5px;
+  border-top: 1px solid #333;
+}
+
+footer {
+  background-color: #f7f7f7;
+}
+footer .upper {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+  padding: 50px 20px 30px;
+}
+footer .upper dl dt {
+  font-size: 1.1rem;
+  font-weight: 700;
+  margin-bottom: 30px;
+}
+footer .upper dl dd {
+  margin-bottom: 20px;
+  font-size: 0.85rem;
+  font-weight: 400;
+  line-height: 1.5;
+}
+footer .upper dl dd a {
+  display: block;
+  position: relative;
+  margin-bottom: 10px;
+  padding-left: 20px;
+  line-height: 1;
+}
+footer .upper dl dd a::before {
+  position: absolute;
+  top: 0;
+  left: 0;
+  content: "▶︎";
+}
+footer .upper dl dd ul li {
+  padding-left: 20px;
+  margin-bottom: 15px;
+  padding-bottom: 15px;
+  border-bottom: 1px solid #333;
+}
+footer .upper dl dd ul li:first-of-type {
+  margin-top: 15px;
+  padding-top: 15px;
+  border-top: 1px solid #333;
+}
+footer .upper dl dd .my-twitter {
+  height: 35vh;
+  border: 1.5px solid #ddd;
+  border-radius: 13px;
+  overflow: scroll;
+}
+footer .upper dl dd .my-twitter iframe {
+  border: unset;
+}
+footer small {
+  display: block;
+  width: 100%;
+  padding: 20px 0 10px;
+  text-align: center;
 }/*# sourceMappingURL=style.css.map */

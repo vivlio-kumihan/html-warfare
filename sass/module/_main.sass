@@ -1,150 +1,187 @@
 @use "../forwards" as fw
 
-main
-  section
-    width: min(100%, 960px)
-    margin: 0 auto
-    padding: 0 4%
-    h2
-      margin: 90px 0 60px
-      font-family: fw.$roboto
-      font-size: 1.7rem
+header
+  display: flex
+  flex-direction: column
+  justify-content: space-between
+  position: fixed
+  top: 0
+  left: 0
+  width: 100%
+  height: 110px
+  background-color: #fff
+  h1
+    margin: 20px 0 0 20px
+    font-size: 1.8rem
+    font-weight: 300
+  .main-nav-menu
+    display: flex
+    padding: 12px 20px
+    color: #fff
+    background-color: #333
+    li
+      font-size: .85rem
       font-weight: 500
-      text-align: center
-    ul
-      margin-bottom: 30px
-      li
-        padding: 3px 0
-        span::after
-          content: ' '
-        &.name
-          margin-bottom: 30px
-    p
-      line-height: 1.5
-    &.works
-      ul
+    li + li
+      margin-left: 50px
+
+main
+  margin: 110px 0 0 0
+  .pick-up
+    display: grid
+    grid-template-columns: repeat(3, 1fr)
+    gap: 25px
+    padding: 40px 20px
+    li
+      display: flex
+      flex-direction: column
+      // justify-content: center
+      img
         width: 100%
-        display: grid
-        grid-template-columns: repeat(3, 1fr)
-        gap: 20px
-        a
-          display: block
+        aspect-ratio: 3/1.7
+        object-fit: cover
+      h3
+        margin-top: 15px
+        font-weight: 600
+        line-height: 1.5
+
+  .wrapper
+    display: grid
+    grid-template-columns: 2fr 1fr
+    gap: 60px
+    padding: 0 20px
+    .main-articles
+      ul
+        li
+          margin-top: 30px
+          h2
+            font-size: 1.3rem
+            font-weight: 700
+            margin-bottom: 15px
+          .matter
+            display: flex
+            margin-bottom: 15px
+            font-size: .9rem
+            font-weight: 400
+            .category
+              margin-left: 20px
           img
             width: 100%
-            object-fit: cover
-    &.news
-      dl
-        div
-          display: flex
-          align-items: center
-          &:first-of-type dt, &:first-of-type dd
-            padding-top: 15px 
-            border-top: 1px dotted #aaa
-          dt, dd
-            margin-bottom: 15px
-            padding-bottom: 15px
-            border-bottom: 1px dotted #aaa
-          dt
-            width: 20%
-            font-weight: 300
-            letter-spacing: .1em
-          dd
-            width: 80%
-    &.contact
-      text-align: center
-      ul
-        margin: 0
-        div
-          display: flex
-          + div
-            margin-top: 10px
-          dt
-            width: 15%
-            font-size: 1.1rem
-            font-weight: 300
-          dd
-            width: 85%
-            input
-              width: 100%
-              height: 50px
-              padding: 5px
-              text-align: left
-              border: 1px solid #bbb
-            textarea
-              height: 150px
-              width: 100%
-              padding: 3%
-              text-align: left
-              border: 1px solid #bbb
-      button
-        width: 200px
-        height: 50px
-        margin: 35px 0 130px
-        text-align: center
-        font-size: .9rem
-        font-weight: 500
-        color: #fff
-        background-color: #333
+          p
+            padding: 20px 5% 
+            font-weight: 400
+            line-height: 1.5
 
-+fw.media-query('sp')
-  main
-    section
-      &.about
-        h2
-          margin-bottom: 40px
-        p
-          font-size: .9rem
-      &.works
-        h2
-          margin: 80px 0 40px
-        ul
-          grid-template-columns: 1fr
-      &.news
-        h2
-          margin-bottom: 40px
-        dl
-          div
-            align-items: flex-start
-            flex-direction: column
-            padding: 15px 0
-            border-bottom: 1px dotted #aaa
-            &:first-of-type
-              padding-top: 15px
-              border-top: 1px dotted #aaa
-            &:first-of-type dt, &:first-of-type dd
-              padding-top: 0
-              border-top: unset
-            dt, dd
-              margin: 0
-              padding: 0
-              width: 100%
-              font-size: .9rem
-              font-weight: 400
-              text-align: left
-              border-bottom: unset
-            dt
-              margin-bottom: 5px
-            dd
-              line-height: 1.5
-      &.contact
-        h2
-          margin: 70px 0 40px
-        ul
-          div
-            flex-direction: column
-            dt
-              font-size: 1rem
-              margin-bottom: 3px
-            dd
-              width: 100%
-        button
-          margin: 35px 0 70px
-              
+// READ MORE
+.read-more
+  text-align: center
+  a
+    display: inline-block
+    position: relative
+    margin: 20px auto
+    font-size: 14px
+    &::after
+      position: absolute
+      bottom: -3px
+      left: 0
+      content: ''
+      width: 100%
+      height: 1px
+      background-color: #333
+      transition: .3s
+    &:hover
+      opacity: .7
+      &::after
+        transform: translateY(10px)
+        opacity: 0
+  
+aside
+  display: flex
+  flex-direction: column
+  width: 100%
+  figcaption, p, li
+    font-size: .85rem
+    font-weight: 400
+    line-height: 1.5
+  .author
+    img
+      width: 125px
+      aspect-ratio: 1
+      border-radius: 50%
+  h4
+    margin: 60px 0 25px
+    font-size: 1.1rem
+    font-weight: 700
+    text-align: center
+  .ranking
+    li
+      + li
+        margin-top: 30px
+      img
+        width: 100%
+        aspect-ratio: 3/1.6
+        object-fit: cover
+        margin-bottom: 5px
+  .monthly-archive-num-list
+    li
+      line-height: 1
+      margin-bottom: 22.5px
+      padding-bottom: 22.5px
+      padding-left: 20px
+      border-bottom: 1px solid #333
+      &:first-of-type
+        margin-top: 22.5px
+        padding-top: 22.5px
+        border-top: 1px solid #333
 
 footer
-  width: 100%
-  padding: 10px
-  text-align: center
-  font-size: .7rem
-  color: #fff
-  background-color: #333
+  background-color: #f7f7f7
+  .upper
+    display: grid
+    grid-template-columns: repeat(3, 1fr)
+    gap: 30px
+    padding: 50px 20px 30px
+    dl
+      dt
+        font-size: 1.1rem
+        font-weight: 700
+        margin-bottom: 30px
+      dd
+        margin-bottom: 20px
+        font-size: .85rem
+        font-weight: 400
+        line-height: 1.5
+        a
+          display: block
+          position: relative
+          margin-bottom: 10px
+          padding-left: 20px
+          line-height: 1
+          &::before
+            position: absolute
+            top: 0
+            left: 0
+            content: '▶︎'
+        ul
+          li
+            padding-left: 20px
+            margin-bottom: 15px
+            padding-bottom: 15px
+            border-bottom: 1px solid #333
+            &:first-of-type
+              margin-top: 15px
+              padding-top: 15px
+              border-top: 1px solid #333
+        .my-twitter
+          height: 35vh
+          border: 1.5px solid #ddd
+          border-radius: 13px
+          overflow: scroll
+          iframe
+            border: unset
+          
+  small
+    display: block
+    width: 100%
+    padding: 20px 0 10px
+    text-align: center
